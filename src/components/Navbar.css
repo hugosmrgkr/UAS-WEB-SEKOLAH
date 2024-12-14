@@ -1,0 +1,136 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Gradien biru modern */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left Section (Logo and Title) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Membuat logo berbentuk lingkaran */
+  margin-right: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Zoom in saat hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* Pastikan tidak terpotong */
+}
+
+/* Right Section (Links and Button) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-links a:hover {
+  color: #4facfe;
+  background-color: #ffffff; /* Efek hover dengan latar putih */
+}
+
+/* Login Button */
+.navbar-login {
+  background: #ffffff;
+  color: #4facfe;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.navbar-login:hover {
+  background: #4facfe;
+  color: #ffffff;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Sedikit membesar */
+  text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .navbar-left {
+    margin-bottom: 10px;
+    width: 100%; /* Pastikan elemen kiri mengambil seluruh lebar */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    margin: 5px;
+  }
+
+  .navbar-login {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%; /* Tombol login memenuhi lebar */
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  /* Menyesuaikan ukuran font dan tampilan untuk layar kecil */
+  .navbar-title {
+    font-size: 1.2rem; /* Ukuran judul lebih kecil di layar kecil */
+  }
+}

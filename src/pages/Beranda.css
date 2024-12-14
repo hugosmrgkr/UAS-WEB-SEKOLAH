@@ -1,0 +1,104 @@
+/* Hero Section */
+.hero-section {
+  background: #000080; /* Warna biru navy */
+  color: #ffffff; /* Warna teks putih untuk kontras */
+  padding: 80px 20px; /* Padding yang lebih besar untuk ruang */
+  text-align: center;
+  border-radius: 15px; /* Membuat sudut lembut */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih lembut */
+  position: relative;
+  overflow: hidden; /* Sembunyikan elemen yang keluar */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floating 6s infinite;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: floating 8s infinite reverse;
+}
+
+/* Floating animation */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.hero-content {
+  max-width: 800px; /* Lebar maksimum konten */
+  margin: auto; /* Pusatkan konten */
+  z-index: 1; /* Pastikan konten di atas elemen dekoratif */
+  position: relative;
+}
+
+.school-logo {
+  width: 350px; /* Ukuran lebih besar untuk gambar di homepage */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 15px; /* Membuat sudut gambar melengkung */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+  margin: 20px 0; /* Jarak atas dan bawah gambar */
+  transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+}
+
+.school-logo:hover {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.school-title {
+  font-size: 3rem; /* Ukuran font besar untuk judul */
+  margin: 20px 0 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan teks */
+}
+
+.school-address,
+.school-contact {
+  font-size: 1.4rem; /* Ukuran font lebih besar */
+  margin: 10px 0;
+  color: #f0f0f0; /* Warna teks abu-abu terang */
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan teks */
+}
+
+.school-contact {
+  font-style: italic; /* Menambahkan gaya miring */
+}
+
+/* Responsif untuk layar besar */
+@media (min-width: 768px) {
+  .school-logo {
+    width: 450px; /* Perbesar gambar untuk layar lebih besar */
+  }
+
+  .school-title {
+    font-size: 4rem; /* Ukuran lebih besar untuk layar besar */
+  }
+
+  .school-address,
+  .school-contact {
+    font-size: 1.6rem;
+  }
+}
