@@ -5,7 +5,7 @@ import "aos/dist/aos.css"; // Import AOS styles
 function Kontak() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
+  const [alamat, setalamat] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [notification, setNotification] = useState("");
@@ -109,9 +109,9 @@ function Kontak() {
             />
             <input
               type="text"
-              placeholder="Perusahaan"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
+              placeholder="Alamat"
+              value={alamat}
+              onChange={(e) => setalamat(e.target.value)}
               style={{
                 padding: "10px",
                 marginBottom: "15px",

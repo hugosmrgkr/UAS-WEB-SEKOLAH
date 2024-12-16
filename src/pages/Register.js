@@ -6,6 +6,9 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [asalSekolah, setAsalSekolah] = useState("");
+  const [asalDaerah, setAsalDaerah] = useState("");
+  const [nis, setNIS] = useState("");
   const [users, setUsers] = useState([]);
   const [error, setError] = useState("");
   const [notification, setNotification] = useState(""); // State for notification
@@ -21,13 +24,13 @@ function Register() {
     e.preventDefault();
 
     // Validasi form
-    if (!username || !email || !password || !confirmPassword) {
+    if (!username || !email || !password || !confirmPassword || !asalSekolah || !asalDaerah || !nis) {
       setError("Please fill in all fields.");
       return;
     }
 
     // Validasi password
-    const passwordRegex = /^(?=.*\d).{6,}$/; // Harus minimal 6 karakter dan mengandung angka
+    const passwordRegex = /^(?=.*\d).{8,}$/; // Harus minimal 8 karakter dan mengandung angka
     if (!passwordRegex.test(password)) {
       setError("Password must be at least 6 characters long and contain at least one number.");
       return;
@@ -39,7 +42,7 @@ function Register() {
     }
 
     if (users.length >= 7) {
-      setError("User limit reached. Maximum 7 users allowed.");
+      setError("Pengguna sudah mencapai batas. Maksimal 7 penguna.");
       return;
     }
 
@@ -55,6 +58,9 @@ function Register() {
     setPassword("");
     setConfirmPassword("");
     setError("");
+    setAsalSekolah("");
+    setAsalDaerah("");
+    setNIS("");
 
     // Tampilkan notifikasi pop-up setelah registrasi berhasil
     setNotification("Akun kamu sudah dibuat. Silakan login.");
@@ -141,6 +147,39 @@ function Register() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                 />
               </div>
+              <div className="form-group">
+                <label htmlFor="asalSekolah">Asal Sekolah</label>
+                <input
+                  type="asalSekolah"
+                  id="asalSekolah"
+                  className="form-control"
+                  placeholder="Masukkan Asal Sekolah"
+                  value={asalSekolah}
+                  onChange={(e) => setAsalSekolah(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="asalDaerah">Asal Daerah</label>
+                <input
+                  type="asalDaerah"
+                  id="asalDaerah"
+                  className="form-control"
+                  placeholder="Masukkan Asal Daerah"
+                  value={asalDaerah}
+                  onChange={(e) => setAsalDaerah(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="nis">NIS</label>
+                <input
+                  type="nis"
+                  id="nis"
+                  className="form-control"
+                  placeholder="Masukkan NIS"
+                  value={nis}
+                  onChange={(e) => setNIS(e.target.value)}
+                />
+              </div>
               <button type="submit" className="btn-primary" disabled={users.length >= 7}>
                 Register
               </button>
@@ -217,7 +256,7 @@ function Register() {
               </tbody>
             </table>
             {users.length >= 7 && (
-              <p className="info-message">User limit reached. Maximum 7 users allowed.</p>
+              <p className="info-message">Pengguna sudah mencapai batas. Maksimal 7 penguna.</p>
             )}
           </div>
         </div>

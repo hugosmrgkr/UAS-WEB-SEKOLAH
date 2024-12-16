@@ -28,7 +28,7 @@ function Profil() {
           Profil SMA Negeri 1 Siantar Narumonda
         </h1>
 
-        {/* Section: Kepala Sekolah (Fokus Utama) */}
+        
         <Row className="mb-4">
           <Col data-aos="fade-right">
             <h3
@@ -55,7 +55,7 @@ function Profil() {
             </Card>
           </Col>
 
-          {/* Foto Kepala Sekolah dengan gambar bulat */}
+          {/* Foto Kepala Sekolah*/}
           <Col md={4} className="d-flex justify-content-center" data-aos="fade-left">
             <img
               src="/jp.jpg"
@@ -92,14 +92,7 @@ function Profil() {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={6} data-aos="fade-up" data-aos-delay="200">
-            <img
-              src="/sejarah.jpg"
-              alt="Sejarah Sekolah"
-              className="img-fluid rounded"
-              style={{ borderRadius: "8px", boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)" }}
-            />
-          </Col>
+          
         </Row>
 
         {/* Section: Kontak Sekolah */}

@@ -67,9 +67,9 @@
   border-radius: 5px;
 }
 
-.navbar-links a:hover {
+.navbar-links :hover {
   color: #4facfe;
-  background-color: #ffffff; /* Efek hover dengan latar putih */
+  background-color:rgba(255, 255, 255, 0.2); /* Efek hover dengan latar putih */
 }
 
 /* Login Button */
@@ -104,7 +104,7 @@
 }
 
 .dropdown-menu {
-  background-color: #4facfe; /* Warna biru gradien */
+  background-color: rgba(255, 255, 255, 0.2); /* Warna biru gradien */
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
   border-radius: 5px;
