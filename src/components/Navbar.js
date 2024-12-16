@@ -22,17 +22,31 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       {/* Bagian Kiri: Logo dan Nama Sekolah */}
-      <div className="navbar-left" style={{ display: "flex", alignItems: "center" }}>
-        <img
-          src="logo-pedal.png"
-          alt="Logo"
-          className="navbar-logo"
-          style={{ width: "40px", marginRight: "10px" }}
-        />
-        <span className="navbar-title" style={{ fontSize: "18px", fontWeight: "bold", color: "white" }}>
-          SMA Negeri 1 Siantar Narumonda
-        </span>
-      </div>
+      {/* Bagian Kiri: Logo dan Nama Sekolah */}
+<div className="navbar-left" style={{ display: "flex", alignItems: "center" }}>
+  <Link
+    to="/beranda" // Tambahkan tautan menuju halaman Beranda
+    style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
+  >
+    <img
+      src="logo-pedal.png"
+      alt="Logo"
+      className="navbar-logo"
+      style={{ width: "40px", marginRight: "10px" }}
+    />
+    <span
+      className="navbar-title"
+      style={{
+        fontSize: "18px",
+        fontWeight: "bold",
+        color: "white",
+        cursor: "pointer", // Memberikan efek pointer saat di-hover
+      }}
+    >
+      SMA Negeri 1 Siantar Narumonda
+    </span>
+  </Link>
+</div>
 
       {/* Bagian Tengah: Link Navbar */}
       <div className="navbar-right" style={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
